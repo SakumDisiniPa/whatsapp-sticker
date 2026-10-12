@@ -30,7 +30,7 @@ Before using this skill, make sure you have:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/USERNAME/whatsapp-sticker.git
+git clone https://github.com/SakumDisiniPa/whatsapp-sticker.git
 cd whatsapp-sticker
 ```
 
