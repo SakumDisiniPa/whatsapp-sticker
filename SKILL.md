@@ -1,4 +1,3 @@
-
 ---
 name: whatsapp-sticker
 description: "Convert images into WebP stickers and send native WhatsApp stickers through an existing Baileys bridge."
