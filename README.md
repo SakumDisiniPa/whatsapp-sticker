@@ -36,7 +36,7 @@ This project has been tested on Ubuntu 26.04 LTS. Other Linux distributions may 
 With [Hermes Agent](https://github.com/NousResearch/hermes-agent) installed, run:
 
 ```bash
-hermes skills install SakumDisiniPa/whatsapp-sticker/skills/whatsapp-sticker
+hermes skills install whatsapp-sticker-v2
 ```
 
 Hermes installs the `whatsapp-sticker` skill into your active profile. You still need to meet the requirements below, including configuring an authenticated Baileys bridge.
