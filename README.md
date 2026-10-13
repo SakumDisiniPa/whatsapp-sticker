@@ -25,18 +25,43 @@ Before using this skill, make sure you have:
 - A bridge exposing compatible `/health` and `/send-media` endpoints.
 - A valid WhatsApp chat ID and a local image file.
 
+## Platform support
+
+This project has been tested on Ubuntu 26.04 LTS. Other Linux distributions may work if they provide Node.js 20 or newer and FFmpeg with `libwebp` support. Windows and macOS have not been tested.
+
 ## Installation
 
-### 1. Clone the repository
+### Install as a Hermes skill
+
+With [Hermes Agent](https://github.com/NousResearch/hermes-agent) installed, run:
+
+```bash
+hermes skills install SakumDisiniPa/whatsapp-sticker/skills/whatsapp-sticker
+```
+
+Hermes installs the `whatsapp-sticker` skill into your active profile. You still need to meet the requirements below, including configuring an authenticated Baileys bridge.
+
+### Manual setup
+
+#### 1. Clone the repository
 
 ```bash
 git clone https://github.com/SakumDisiniPa/whatsapp-sticker.git
 cd whatsapp-sticker
 ```
 
-Replace `USERNAME` with the GitHub account or organization that owns the repository.
+#### 2. Install the skill into Hermes
 
-### 2. Install FFmpeg
+Copy the skill directory into Hermes's skills folder:
+
+```bash
+mkdir -p "$HOME/.hermes/skills"
+cp -r skills/whatsapp-sticker "$HOME/.hermes/skills/whatsapp-sticker"
+```
+
+If that skill folder already exists, remove or rename it before copying to avoid mixing files from different versions. Restart or refresh your Hermes session if the skill does not appear.
+
+#### 3. Install FFmpeg
 
 On Ubuntu or Debian:
 
@@ -52,7 +77,7 @@ ffmpeg -version
 ffmpeg -encoders | grep libwebp
 ```
 
-### 3. Configure the WhatsApp bridge
+#### 4. Configure the WhatsApp bridge
 
 Start your existing Baileys bridge and make sure its health endpoint reports a connected WhatsApp session.
 
@@ -195,7 +220,7 @@ The script progressively lowers WebP quality. If the output still exceeds the li
 
 ## License
 
-Choose a license before publishing this project. If you want others to reuse, modify, and redistribute the code, consider adding an appropriate open-source license such as the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
